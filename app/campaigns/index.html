@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campaigns — Neo Party AI Studio</title>
+<meta name="description" content="Manage marketing campaigns in Neo Party AI Studio.">
+<link rel="canonical" href="https://tokoneoparty.com/app/campaigns/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%238b5cf6'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='16' font-weight='bold' fill='white' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/app.css">
+</head>
+<body class="app-body">
+
+<aside class="sidebar" id="sidebar">
+  <div class="side-brand">NEO PARTY <span class="ai-tag">AI</span></div>
+  <nav class="side-nav">
+    <a href="/app/" class="side-link"><span class="si">◈</span>Dashboard</a>
+    <a href="/app/products/" class="side-link"><span class="si">▦</span>Products</a>
+    <a href="/app/campaigns/" class="side-link active"><span class="si">⚑</span>Campaigns</a>
+    <a href="/app/content/" class="side-link"><span class="si">✦</span>Content Studio</a>
+    <a href="/app/workflows/" class="side-link"><span class="si">⛁</span>Workflows</a>
+    <a href="/app/assistant/" class="side-link"><span class="si">✉</span>AI Assistant</a>
+  </nav>
+  <div class="side-foot">
+    <a href="#" class="side-link"><span class="si">⚙</span>Settings</a>
+    <a href="/contact/" class="side-link"><span class="si">?</span>Help</a>
+    <a href="/" class="side-link"><span class="si">←</span>Back to site</a>
+  </div>
+</aside>
+<div class="scrim" id="scrim"></div>
+
+<main class="main">
+  <div class="topbar-mobile">
+    <button class="btn-secondary" onclick="toggleSide()">☰ Menu</button>
+    <span class="brand">NEO PARTY <span class="ai-tag">AI</span></span>
+  </div>
+
+  <div class="main-head" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem">
+    <div><h1>Campaigns</h1><p>Every campaign in your workspace.</p></div>
+    <button class="btn-add" onclick="location.href='/app/'">+ Create Campaign</button>
+  </div>
+
+  <div class="camp-grid">
+    <div class="camp-card">
+      <div class="camp-top"><h3>Sound Without Limits</h3><span class="status draft">Draft</span></div>
+      <div class="camp-meta">
+        <div><span>Created</span>Oct 6, 2026</div>
+        <div><span>Target audience</span>Young professionals</div>
+        <div><span>Channel</span>Instagram · TikTok</div>
+        <div><span>Product</span>Wireless Headphones</div>
+      </div>
+    </div>
+    <div class="camp-card">
+      <div class="camp-top"><h3>Summer Product Launch</h3><span class="status review">In Review</span></div>
+      <div class="camp-meta">
+        <div><span>Created</span>Oct 2, 2026</div>
+        <div><span>Target audience</span>Outdoor enthusiasts</div>
+        <div><span>Channel</span>Instagram · X</div>
+        <div><span>Product</span>Portable Speaker</div>
+      </div>
+    </div>
+    <div class="camp-card">
+      <div class="camp-top"><h3>Carry Everything Forward</h3><span class="status live">Live</span></div>
+      <div class="camp-meta">
+        <div><span>Created</span>Sep 28, 2026</div>
+        <div><span>Target audience</span>Commuters & travelers</div>
+        <div><span>Channel</span>Website · Email</div>
+        <div><span>Product</span>Smart Backpack</div>
+      </div>
+    </div>
+    <div class="camp-card">
+      <div class="camp-top"><h3>Take the Party Anywhere</h3><span class="status draft">Draft</span></div>
+      <div class="camp-meta">
+        <div><span>Created</span>Sep 24, 2026</div>
+        <div><span>Target audience</span>Music lovers, 20–35</div>
+        <div><span>Channel</span>TikTok</div>
+        <div><span>Product</span>Portable Speaker</div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="/dashboard.js"></script>
+</body>
+</html>

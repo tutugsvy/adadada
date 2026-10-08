@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products — Neo Party AI Studio</title>
+<meta name="description" content="Manage your products in Neo Party AI Studio.">
+<link rel="canonical" href="https://tokoneoparty.com/app/products/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%238b5cf6'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='16' font-weight='bold' fill='white' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/app.css">
+</head>
+<body class="app-body">
+
+<aside class="sidebar" id="sidebar">
+  <div class="side-brand">NEO PARTY <span class="ai-tag">AI</span></div>
+  <nav class="side-nav">
+    <a href="/app/" class="side-link"><span class="si">◈</span>Dashboard</a>
+    <a href="/app/products/" class="side-link active"><span class="si">▦</span>Products</a>
+    <a href="/app/campaigns/" class="side-link"><span class="si">⚑</span>Campaigns</a>
+    <a href="/app/content/" class="side-link"><span class="si">✦</span>Content Studio</a>
+    <a href="/app/workflows/" class="side-link"><span class="si">⛁</span>Workflows</a>
+    <a href="/app/assistant/" class="side-link"><span class="si">✉</span>AI Assistant</a>
+  </nav>
+  <div class="side-foot">
+    <a href="#" class="side-link"><span class="si">⚙</span>Settings</a>
+    <a href="/contact/" class="side-link"><span class="si">?</span>Help</a>
+    <a href="/" class="side-link"><span class="si">←</span>Back to site</a>
+  </div>
+</aside>
+<div class="scrim" id="scrim"></div>
+
+<main class="main">
+  <div class="topbar-mobile">
+    <button class="btn-secondary" onclick="toggleSide()">☰ Menu</button>
+    <span class="brand">NEO PARTY <span class="ai-tag">AI</span></span>
+  </div>
+
+  <div class="main-head" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem">
+    <div><h1>Products</h1><p>Your product catalog — the source of every workflow.</p></div>
+    <button class="btn-add" id="add-product">+ Add Product</button>
+  </div>
+
+  <div class="prod-grid">
+    <div class="prod-card">
+      <div class="picon">🎧</div>
+      <h3>Wireless Headphones</h3>
+      <p class="cat">Audio · Consumer Electronics</p>
+      <p class="desc">Flagship-grade wireless headphones with adaptive noise cancellation and 40-hour battery life.</p>
+      <p class="desc" style="margin-bottom:.4rem"><strong style="color:var(--text)">Target audience:</strong> Young professionals, 22–35</p>
+      <div class="ksp"><span>40h battery</span><span>ANC</span><span>USB-C</span><span>Multipoint</span></div>
+      <div class="btn-row">
+        <button class="btn-secondary" data-analyze='{"name":"Wireless Headphones","positioning":"Premium sound at an everyday price — positioned against flagship brands costing twice as much.","angle":"Commute-focused noise cancellation. AI identifies this as the most resonant emotional hook for the 22–35 professional segment.","risk":"Buyers may doubt call quality — address the mic explicitly in content to preempt the top objection."}'>Analyze with AI</button>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="picon">🔊</div>
+      <h3>Portable Speaker</h3>
+      <p class="cat">Audio · Lifestyle</p>
+      <p class="desc">Rugged, water-resistant portable speaker with 24-hour playtime and deep bass.</p>
+      <p class="desc" style="margin-bottom:.4rem"><strong style="color:var(--text)">Target audience:</strong> Outdoor enthusiasts, 20–35</p>
+      <div class="ksp"><span>IP67</span><span>24h playtime</span><span>Deep bass</span></div>
+      <div class="btn-row">
+        <button class="btn-secondary" data-analyze='{"name":"Portable Speaker","positioning":"The outdoor-gathering speaker — owns the moment between portability and sound quality.","angle":"Golden-hour social scenes. AI identifies group/outdoor usage as the strongest creative territory.","risk":"Highly competitive segment — differentiation must come from battery + durability proof, not specs alone."}'>Analyze with AI</button>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="picon">🎒</div>
+      <h3>Smart Backpack</h3>
+      <p class="cat">Travel · Everyday Carry</p>
+      <p class="desc">Anti-theft commuter backpack with USB charging port and dedicated 16" laptop compartment.</p>
+      <p class="desc" style="margin-bottom:.4rem"><strong style="color:var(--text)">Target audience:</strong> Commuters & travelers, 22–40</p>
+      <div class="ksp"><span>Anti-theft</span><span>USB charging</span><span>16" laptop</span></div>
+      <div class="btn-row">
+        <button class="btn-secondary" data-analyze='{"name":"Smart Backpack","positioning":"Organization as a feature — every pocket has a purpose.","angle":"Commute transformation: chaotic mornings become streamlined. AI identifies routine-based storytelling as the winning angle.","risk":"Feature lists do not sell bags — lifestyle proof and durability evidence matter more."}'>Analyze with AI</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="modal-back" id="modal-back">
+  <div class="modal">
+    <button class="close-x" id="modal-close" aria-label="Close">✕</button>
+    <h3 id="modal-title">AI Analysis</h3>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script src="/dashboard.js"></script>
+</body>
+</html>

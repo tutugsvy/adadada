@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Content Studio — Neo Party AI Studio</title>
+<meta name="description" content="Generate product descriptions, social posts, ad copy, and more in Neo Party AI Studio.">
+<link rel="canonical" href="https://tokoneoparty.com/app/content/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%238b5cf6'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='16' font-weight='bold' fill='white' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/app.css">
+</head>
+<body class="app-body">
+
+<aside class="sidebar" id="sidebar">
+  <div class="side-brand">NEO PARTY <span class="ai-tag">AI</span></div>
+  <nav class="side-nav">
+    <a href="/app/" class="side-link"><span class="si">◈</span>Dashboard</a>
+    <a href="/app/products/" class="side-link"><span class="si">▦</span>Products</a>
+    <a href="/app/campaigns/" class="side-link"><span class="si">⚑</span>Campaigns</a>
+    <a href="/app/content/" class="side-link active"><span class="si">✦</span>Content Studio</a>
+    <a href="/app/workflows/" class="side-link"><span class="si">⛁</span>Workflows</a>
+    <a href="/app/assistant/" class="side-link"><span class="si">✉</span>AI Assistant</a>
+  </nav>
+  <div class="side-foot">
+    <a href="#" class="side-link"><span class="si">⚙</span>Settings</a>
+    <a href="/contact/" class="side-link"><span class="si">?</span>Help</a>
+    <a href="/" class="side-link"><span class="si">←</span>Back to site</a>
+  </div>
+</aside>
+<div class="scrim" id="scrim"></div>
+
+<main class="main">
+  <div class="topbar-mobile">
+    <button class="btn-secondary" onclick="toggleSide()">☰ Menu</button>
+    <span class="brand">NEO PARTY <span class="ai-tag">AI</span></span>
+  </div>
+
+  <div class="main-head">
+    <h1>Content Studio</h1>
+    <p>Generate on-brand content for every channel.</p>
+  </div>
+
+  <div class="cs-layout">
+    <div class="cs-panel">
+      <label>Content Type</label>
+      <div class="type-grid">
+        <button class="type-btn active" data-type="Product Description">Product Description</button>
+        <button class="type-btn" data-type="Instagram Post">Instagram Post</button>
+        <button class="type-btn" data-type="X Post">X Post</button>
+        <button class="type-btn" data-type="Ad Copy">Ad Copy</button>
+        <button class="type-btn" data-type="Email">Email</button>
+        <button class="type-btn" data-type="FAQ">FAQ</button>
+        <button class="type-btn" data-type="Creative Brief">Creative Brief</button>
+      </div>
+      <label for="cs-input">Describe what you want to create</label>
+      <textarea id="cs-input" placeholder="e.g. A product description for our new wireless headphones, premium tone..."></textarea>
+      <button class="btn-generate" id="cs-generate" style="width:100%;justify-content:center">✦ Generate</button>
+    </div>
+    <div class="output-panel" id="cs-output">
+      <div class="output-empty">Your generated content will appear here.<br>Pick a type, describe it, hit Generate.</div>
+    </div>
+  </div>
+</main>
+
+<script src="/dashboard.js"></script>
+</body>
+</html>

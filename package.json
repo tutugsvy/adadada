@@ -1,0 +1,1 @@
+{"description":"Neo Party AI — AI-powered commerce and creative workflows. Static site, deployable to Vercel with zero build configuration.","name":"neo-party-ai","private":true,"scripts":{"deploy":"vercel --prod","dev":"npx serve ."},"version":"1.0.0"}

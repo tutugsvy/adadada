@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — Neo Party AI Studio</title>
+<meta name="description" content="Neo Party AI Studio dashboard. Create campaigns, content, and workflows with AI.">
+<link rel="canonical" href="https://tokoneoparty.com/app/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%238b5cf6'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='16' font-weight='bold' fill='white' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/app.css">
+</head>
+<body class="app-body">
+
+<aside class="sidebar" id="sidebar">
+  <div class="side-brand">NEO PARTY <span class="ai-tag">AI</span></div>
+  <nav class="side-nav">
+    <a href="/app/" class="side-link active"><span class="si">◈</span>Dashboard</a>
+    <a href="/app/products/" class="side-link"><span class="si">▦</span>Products</a>
+    <a href="/app/campaigns/" class="side-link"><span class="si">⚑</span>Campaigns</a>
+    <a href="/app/content/" class="side-link"><span class="si">✦</span>Content Studio</a>
+    <a href="/app/workflows/" class="side-link"><span class="si">⛁</span>Workflows</a>
+    <a href="/app/assistant/" class="side-link"><span class="si">✉</span>AI Assistant</a>
+  </nav>
+  <div class="side-foot">
+    <a href="#" class="side-link"><span class="si">⚙</span>Settings</a>
+    <a href="/contact/" class="side-link"><span class="si">?</span>Help</a>
+    <a href="/" class="side-link"><span class="si">←</span>Back to site</a>
+  </div>
+</aside>
+<div class="scrim" id="scrim"></div>
+
+<main class="main">
+  <div class="topbar-mobile">
+    <button class="btn-secondary" onclick="toggleSide()">☰ Menu</button>
+    <span class="brand">NEO PARTY <span class="ai-tag">AI</span></span>
+  </div>
+
+  <div class="main-head">
+    <h1 id="greeting">Good afternoon 👋</h1>
+    <p>What would you like to create?</p>
+  </div>
+
+  <div class="composer">
+    <textarea id="ai-input" placeholder="Describe what you want to build... e.g. Launch a campaign for our new wireless headphones targeting young professionals."></textarea>
+    <div class="composer-foot">
+      <span class="composer-hint">Demo workspace — outputs are generated locally in your browser.</span>
+      <button class="btn-generate" id="create-btn">✦ Create with AI</button>
+    </div>
+  </div>
+
+  <div class="proc-box" id="proc-box"></div>
+
+  <div class="result" id="result">
+    <div class="result-head">
+      <h3><span class="ok">✓</span> Campaign Ready</h3>
+      <div class="result-actions">
+        <button class="chip-btn" id="btn-edit">Edit</button>
+        <button class="chip-btn" id="btn-regen">Regenerate</button>
+        <button class="chip-btn" id="btn-copy">Copy</button>
+        <button class="chip-btn" id="btn-export">Export</button>
+      </div>
+    </div>
+    <div id="result-text"></div>
+  </div>
+
+  <h2 class="sec-title">Recent Work</h2>
+  <div class="work-grid">
+    <div class="work-card" onclick="toast('Opening Wireless Headphones Campaign')"><div class="wicon">🎧</div><h4>Wireless Headphones Campaign</h4><p>Campaign · Draft</p></div>
+    <div class="work-card" onclick="toast('Opening Summer Product Launch')"><div class="wicon">☀️</div><h4>Summer Product Launch</h4><p>Campaign · In Review</p></div>
+    <div class="work-card" onclick="toast('Opening Instagram Campaign')"><div class="wicon">📸</div><h4>Instagram Campaign</h4><p>Content · Ready</p></div>
+    <div class="work-card" onclick="toast('Opening Product Description')"><div class="wicon">📝</div><h4>Product Description</h4><p>Content · Ready</p></div>
+  </div>
+</main>
+
+<script src="/dashboard.js"></script>
+</body>
+</html>
